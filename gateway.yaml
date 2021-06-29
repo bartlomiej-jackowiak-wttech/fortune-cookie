@@ -1,0 +1,18 @@
+server:
+  port: 8090
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:8761/eureka,http://eureka-peer2:8762/eureka
+# taken from one of the many spring.io examples
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
